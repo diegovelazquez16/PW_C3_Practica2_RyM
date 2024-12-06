@@ -1,0 +1,13 @@
+<div *ngIf="personajes.length > 0">
+    <h3>Personajes</h3>
+    <ul>
+      <li *ngFor="let personaje of personajes">
+        <img [src]="personaje.image" alt="{{ personaje.name }}" width="50" height="50" />
+        {{ personaje.name }}
+      </li>
+    </ul>
+  </div>
+  <div *ngIf="personajes.length === 0">
+    <p>Cargando personajes...</p>
+  </div>
+  
