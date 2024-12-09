@@ -1,0 +1,123 @@
+/* General styles for cards */
+.card {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    background-color: #181818; /* Fondo oscuro */
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    background-color: #333; /* Color de fondo más oscuro al pasar el mouse */
+  }
+  
+  .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+  
+  .card-text {
+    text-align: center;
+    font-size: 1rem;
+    color: #ddd; /* Color de texto más suave */
+    padding: 10px;
+    line-height: 1.5;
+  }
+  
+  .btn-primary {
+    width: 100%;
+    font-weight: bold;
+    background-color: #e50914; /* Color rojo de plataformas de streaming */
+    color: white;
+    padding: 12px 0;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    border: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #f40612; /* Rojo más brillante al pasar el mouse */
+  }
+  
+  /* Modal styles */
+  .modal.show {
+    background: rgba(0, 0, 0, 0.7); /* Fondo más oscuro para un mejor contraste */
+    transition: background 0.3s ease;
+  }
+  
+  .modal-content {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    background-color: #181818;
+    color: white;
+  }
+  
+  .modal-header {
+    background-color: #e50914; /* Rojo similar al logo de Netflix */
+    color: white;
+    padding: 1.5rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .modal-header .btn-close {
+    background: none;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  .modal-header .btn-close:hover {
+    color: #f40612; /* Rojo brillante en el hover */
+  }
+  
+  .modal-body {
+    padding: 2rem;
+    text-align: center;
+    font-size: 1rem;
+    color: #ddd;
+  }
+  
+  .modal-footer {
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .modal-footer .btn-secondary {
+    background-color: #6c757d;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-weight: bold;
+  }
+  
+  .modal-footer .btn-secondary:hover {
+    background-color: #5a6268; /* Cambio a gris más oscuro en hover */
+  }
+  
+  .modal-footer .btn-success {
+    background-color: #28a745;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+  
+  .modal-footer .btn-success:hover {
+    background-color: #218838; /* Verde más oscuro en hover */
+  }
+  

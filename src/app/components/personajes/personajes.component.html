@@ -1,13 +1,34 @@
-<div *ngIf="personajes.length > 0">
-    <h3>Personajes</h3>
-    <ul>
-      <li *ngFor="let personaje of personajes">
-        <img [src]="personaje.image" alt="{{ personaje.name }}" width="50" height="50" />
-        {{ personaje.name }}
-      </li>
-    </ul>
+<div class="row">
+  <div *ngFor="let personaje of personajes" class="col-md-4 mb-4">
+    <div class="card">
+      <img [src]="personaje.image" class="card-img-top" alt="{{ personaje.name }}" />
+      <div class="card-body">
+        <h5 class="card-title">{{ personaje.name }}</h5>
+        <p class="card-text">Especie: {{ personaje.species }}</p>
+        <button class="btn btn-primary" (click)="abrirModal(personaje)">Ver más</button>
+      </div>
+    </div>
   </div>
-  <div *ngIf="personajes.length === 0">
-    <p>Cargando personajes...</p>
+</div>
+
+<!-- Modal -->
+<div *ngIf="mostrarModal" class="modal show d-block" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">{{ personajeSeleccionado?.name }}</h5>
+        <button type="button" class="btn-close" (click)="cerrarModal()"></button>
+      </div>
+      <div class="modal-body">
+        <img [src]="personajeSeleccionado?.image" class="img-fluid mb-3" alt="{{ personajeSeleccionado?.name }}" />
+        <p><strong>Especie:</strong> {{ personajeSeleccionado?.species }}</p>
+        <p><strong>Estado:</strong> {{ personajeSeleccionado?.status }}</p>
+        <p><strong>Género:</strong> {{ personajeSeleccionado?.gender }}</p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" (click)="cerrarModal()">Cancelar</button>
+        <button class="btn btn-success" (click)="agregarAFavoritos()">Me encanta</button>
+      </div>
+    </div>
   </div>
-  
+</div>
