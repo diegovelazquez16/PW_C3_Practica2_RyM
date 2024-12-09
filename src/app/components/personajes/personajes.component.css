@@ -1,0 +1,63 @@
+/* General styles for cards */
+.card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .card-text {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #6c757d;
+  }
+  
+  .btn-primary {
+    width: 100%;
+    font-weight: bold;
+  }
+  
+  /* Modal styles */
+  .modal.show {
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal-content {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .modal-header {
+    background-color: #007bff;
+    color: white;
+    padding: 1rem;
+  }
+  
+  .modal-header .btn-close {
+    background: white;
+    color: #007bff;
+  }
+  
+  .modal-body {
+    padding: 1.5rem;
+  }
+  
+  .modal-footer .btn-secondary {
+    background-color: #6c757d;
+  }
+  
+  .modal-footer .btn-success {
+    background-color: #28a745;
+    font-weight: bold;
+  }
+  

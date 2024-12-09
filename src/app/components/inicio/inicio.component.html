@@ -8,13 +8,12 @@
             <p class="card-text"><strong>Fecha de emisión:</strong> {{ episodio.air_date }}</p>
             <p class="card-text"><strong>Episodio:</strong> {{ episodio.episode }}</p>
             <button
-            class="btn btn-outline-danger"
-            [class.favorito]="esFavorito(episodio)"
-            (click)="alternarFavorito(episodio)"
-          >
-            ♥
-          </button>
-          
+              class="btn btn-outline-danger"
+              [class.favorito]="esFavorito(episodio)"
+              (click)="alternarFavorito(episodio)"
+            >
+              ♥
+            </button>
             <button class="btn btn-primary mt-2" (click)="mostrarPersonajes(episodio)">
               Ver personajes
             </button>
