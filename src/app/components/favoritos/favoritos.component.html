@@ -1,0 +1,11 @@
+<div class="container">
+    <h2>Mis Episodios Favoritos</h2>
+    <div *ngIf="favoritos.length === 0">
+      <p>No tienes episodios favoritos aún.</p>
+    </div>
+    <div *ngFor="let episodio of favoritos" class="mb-3">
+      <app-episodio [episodio]="episodio"></app-episodio>
+      <button class="btn btn-danger mt-2" (click)="quitarDeFavoritos(episodio)">Eliminar</button>
+    </div>
+  </div>
+  

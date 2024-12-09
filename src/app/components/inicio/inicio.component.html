@@ -1,0 +1,33 @@
+<div class="container">
+    <h1>Episodios de Rick y Morty</h1>
+    <div class="row">
+      <div *ngFor="let episodio of episodios" class="col-md-4 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">{{ episodio.name }}</h5>
+            <p class="card-text"><strong>Fecha de emisión:</strong> {{ episodio.air_date }}</p>
+            <p class="card-text"><strong>Episodio:</strong> {{ episodio.episode }}</p>
+            <button
+              class="btn btn-outline-danger"
+              [class.favorito]="esFavorito(episodio)"
+              (click)="alternarFavorito(episodio)"
+            >
+              ♥
+            </button>
+            <button class="btn btn-primary mt-2" (click)="mostrarPersonajes(episodio)">
+              Ver personajes
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Modal para personajes -->
+    <div *ngIf="episodioSeleccionado" class="modal">
+      <div class="modal-content">
+        <span class="close" (click)="cerrarModal()">&times;</span>
+        <app-personajes [urls]="episodioSeleccionado.characters"></app-personajes>
+      </div>
+    </div>
+  </div>
+  
