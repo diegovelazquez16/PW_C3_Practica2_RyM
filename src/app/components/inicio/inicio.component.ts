@@ -29,7 +29,7 @@ export class InicioComponent implements OnInit {
 
   alternarFavorito(episodio: any) {
     this.favoritosService.alternarFavorito(episodio);
-  }
+  }  
 
   esFavorito(episodio: any): boolean {
     return this.favoritosService.esFavorito(episodio);

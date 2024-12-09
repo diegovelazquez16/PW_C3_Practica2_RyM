@@ -8,6 +8,7 @@ import { FavoritosService } from '../../services/favoritos.service';
 })
 export class FavoritosComponent implements OnInit {
   favoritos: any[] = [];
+  mostrar: boolean = false; 
 
   constructor(private favoritosService: FavoritosService) {}
 
@@ -15,8 +16,19 @@ export class FavoritosComponent implements OnInit {
     this.favoritos = this.favoritosService.obtenerFavoritos();
   }
 
+  abrirModal() {
+    this.favoritos = this.favoritosService.obtenerFavoritos(); 
+    this.mostrar = true;
+  }
+
+  cerrarModal() {
+    this.mostrar = false;
+  }
+
   quitarDeFavoritos(episodio: any) {
     this.favoritosService.alternarFavorito(episodio);
-    this.favoritos = this.favoritosService.obtenerFavoritos(); // Actualiza la lista
+    this.favoritos = this.favoritosService.obtenerFavoritos(); 
   }
 }
+
+

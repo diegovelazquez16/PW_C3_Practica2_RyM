@@ -1,11 +1,25 @@
 <div class="container">
-    <h2>Mis Episodios Favoritos</h2>
-    <div *ngIf="favoritos.length === 0">
-      <p>No tienes episodios favoritos aún.</p>
-    </div>
-    <div *ngFor="let episodio of favoritos" class="mb-3">
-      <app-episodio [episodio]="episodio"></app-episodio>
-      <button class="btn btn-danger mt-2" (click)="quitarDeFavoritos(episodio)">Eliminar</button>
+  <button class="btn btn-primary" (click)="abrirModal()">Ver Favoritos</button>
+
+  <div *ngIf="mostrar" class="modal">
+    <div class="modal-content">
+      <span class="close" (click)="cerrarModal()">&times;</span>
+      <h2>Mis Episodios Favoritos</h2>
+      <ul>
+        <li *ngFor="let favorito of favoritos" class="mb-2">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">{{ favorito.name }}</h5>
+              <p class="card-text">Fecha de emisión: {{ favorito.air_date }}</p>
+              <p class="card-text">Episodio: {{ favorito.episode }}</p>
+              <button class="btn btn-danger" (click)="quitarDeFavoritos(favorito)">
+                Eliminar
+              </button>
+            </div>
+          </div>
+        </li>
+      </ul>
     </div>
   </div>
-  
+</div>
+
