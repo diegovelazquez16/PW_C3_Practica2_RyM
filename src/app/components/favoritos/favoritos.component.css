@@ -1,42 +1,88 @@
+/* Modal styles */
 .modal {
-    display: block;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4);
-  }
-  
-  .modal-content {
-    background-color: #fff;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  }
-  
-  .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  
-  .close:hover {
-    color: #000;
-  }
-  
-  .card {
-    margin-bottom: 15px;
-  }
-  button {
-    display: inline-block;
-    margin-top: 20px;
-  }
-  
+  display: block;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo más oscuro */
+  transition: background-color 0.3s ease; /* Transición suave */
+}
+
+.modal-content {
+  background-color: #181818; /* Fondo oscuro */
+  margin: 10% auto;
+  padding: 30px;
+  border-radius: 15px; /* Bordes redondeados */
+  width: 70%;
+  max-width: 800px; /* Máximo ancho */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
+  color: white; /* Texto blanco */
+  font-family: 'Arial', sans-serif;
+}
+
+.close {
+  color: #f1f1f1;
+  font-size: 32px;
+  font-weight: bold;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.close:hover {
+  color: #e50914; /* Rojo vibrante al pasar el mouse */
+}
+
+.card {
+  background-color: #242424; /* Fondo oscuro para las cards */
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: white;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  text-align: center;
+  font-size: 1rem;
+  color: #ddd; /* Texto suave */
+  padding: 10px;
+  line-height: 1.5;
+}
+
+button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 30px;
+  background-color: #e50914; /* Rojo brillante */
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #f40612; /* Rojo más brillante */
+  transform: scale(1.05); /* Efecto de zoom en el hover */
+}
