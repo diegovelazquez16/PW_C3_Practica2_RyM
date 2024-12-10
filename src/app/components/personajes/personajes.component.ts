@@ -5,7 +5,9 @@ import { FavoritosService } from '../../services/favoritos.service';
 @Component({
   selector: 'app-personajes',
   templateUrl: './personajes.component.html',
-  styleUrls: ['./personajes.component.css']
+  styleUrls: ['./personajes.component.css'],
+  standalone: false
+
 })
 export class PersonajesComponent implements OnInit {
   @Input() urls: string[] = [];
