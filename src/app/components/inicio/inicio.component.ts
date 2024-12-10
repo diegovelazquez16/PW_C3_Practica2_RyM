@@ -1,4 +1,3 @@
-// Archivo: src/app/components/inicio/inicio.component.ts
 import { Component, OnInit } from '@angular/core';
 import { RickMortyService } from '../../services/rick-morty.service';
 import { FavoritosService } from '../../services/favoritos.service';
@@ -6,7 +5,8 @@ import { FavoritosService } from '../../services/favoritos.service';
 @Component({
   selector: 'app-inicio',
   templateUrl: './inicio.component.html',
-  styleUrls: ['./inicio.component.css']
+  styleUrls: ['./inicio.component.css'],
+  standalone: false
 })
 export class InicioComponent implements OnInit {
   episodios: any[] = [];

@@ -3,8 +3,9 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'app-episodio',
   templateUrl: './episodio.component.html',
-  styleUrls: ['./episodio.component.css']
+  styleUrls: ['./episodio.component.css'],
+  standalone: false
 })
 export class EpisodioComponent {
-  @Input() episodio: any; // Recibirá los datos del episodio desde el componente padre
+  @Input() episodio: any; 
 }
