@@ -4,7 +4,9 @@ import { FavoritosService } from '../../services/favoritos.service';
 @Component({
   selector: 'app-favoritos',
   templateUrl: './favoritos.component.html',
-  styleUrls: ['./favoritos.component.css']
+  styleUrls: ['./favoritos.component.css'],
+  standalone: false
+
 })
 export class FavoritosComponent implements OnInit {
   favoritos: any[] = [];
